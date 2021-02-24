@@ -1,0 +1,26 @@
+.tables {
+    margin: 50px 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.entity-table {
+    text-align: center;
+}
+
+.entity-title {
+    font-size: 40pt;
+}
+
+.entity-add {
+    border-style: none;
+    background-color: transparent;
+}
+
+.entity-add :hover {
+    background-color: grey;
+}
+
+.btn.btn-outline-secondary {
+    border-style:none;
+}
