@@ -24,3 +24,13 @@
 .btn.btn-outline-secondary {
     border-style:none;
 }
+
+#entityButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 24px;
+    width: 24px;
+}
