@@ -9,8 +9,10 @@
     <link rel = "stylesheet" href = "styles/main.css">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 </head>
+
 
 <body>
     <!-- navbar -->
@@ -45,25 +47,52 @@
             </form>
           </div>
         </div>
-      </nav>
-    
+	</nav>
+
+	<!-- Modal -->
+	<div class="modal fade" id="entityModal" tabindex="-1" aria-labelledby="entityModalLable" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="mb-2">
+						  <label for="recipient-name" class="col-form-label">Recipient:</label>
+						  <input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="mb-2">
+						  <label for="message-text" class="col-form-label">Message:</label>
+						  <textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+		</div>
+		</div>
+	</div>
 
     <div class = "tables">
         <!-- entity table -->
         <div class = "entity-table">
-            <div class = "entity-title">
+            <div class = "table-title">
                 Entity Table
             </div>
-            <table class="table">
+            <table class="table" id = "entTable">
                 <thead>
-                  <tr>
-                    <th scope="col">e1:(pk, attributes, ...)</th>
-                    <th scope = "col">
-                        <button class = "entity-add" type = "button">
-                            <img src="assets/plus.svg">
-                        </button>
-                    </th>
-                  </tr>
+					<tr>
+						<th scope="col">e1:(pk, attributes, ...)</th>
+						<th scope = "col">
+							<button id="entityButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
+								<img src="assets/plus.svg">
+							</button>
+						</th>
+					</tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -77,13 +106,13 @@
                 </tbody>
               </table>
         </div>
-        
+
         <!-- relationship table -->
         <div class = "relationship-table">
             test 2
         </div>
     </div>
-      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src = "scripts/main.js"></script>
 </body>
 </html>
