@@ -4,8 +4,15 @@
     justify-content: center;
 }
 
+.table-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    font-size: 1rem;
+}
+
 .entity-table {
-    text-align: center;
     border-style: solid;
     border-width: 2px;
     width: 35%;
@@ -38,6 +45,7 @@
 }
 
 #entityButton {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +53,19 @@
     padding-right: 6px;
     height: 24px;
     width: 24px;
+    right: 10px;
+}
+
+#relationshipButton {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 24px;
+    width: 24px;
+    right: 10px;
 }
 
 .footer {

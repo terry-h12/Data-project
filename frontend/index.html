@@ -96,15 +96,17 @@
     <div class = "tables">
         <!-- entity table -->
         <div class = "entity-table">
-            <h1>Entities</h1>
+			<div class="table-header">
+				<h1>Entities</h1>
+				<button id="entityButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
+					<img src="assets/plus.svg">
+				</button>
+			</div>
             <table class="table" id = "entTable">
                 <thead>
 					<tr>
 						<th scope="col">e1:(pk, attri butes, ...)</th>
 						<th scope = "col">
-							<button id="entityButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
-								<img src="assets/plus.svg">
-							</button>
 						</th>
 					</tr>
                 </thead>
@@ -123,7 +125,12 @@
 
         <!-- relationship table -->
         <div class = "relationship-table">
-			<h1>Relationships</h1>
+			<div class="table-header">
+				<h1>Relationships</h1>
+				<button id="relationshipButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
+					<img src="assets/plus.svg">
+				</button>
+			</div>
         </div>
     </div>
 
