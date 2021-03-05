@@ -15,6 +15,10 @@
 
 
 <body>
+    <!-- add modal that pops up when you press info -->
+
+
+    
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -60,18 +64,30 @@
 				<div class="modal-body">
 					<form>
 						<div class="mb-2">
-						  <label for="recipient-name" class="col-form-label">Recipient:</label>
-						  <input type="text" class="form-control" id="recipient-name">
+						  <label for="recipient-name" class="col-form-label">Name:</label>
+						  <input type="text" class="form-control" id="entity-name">
 						</div>
 						<div class="mb-2">
-						  <label for="message-text" class="col-form-label">Message:</label>
-						  <textarea class="form-control" id="message-text"></textarea>
+						  <label for="message-text" class="col-form-label">Primary Key:</label>
+						  <textarea class="form-control" id="primary-key"></textarea>
 						</div>
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Attribute:</label>
+                            <textarea class="form-control" id="attribute"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Subtype:</label>
+                            <textarea class="form-control" id="subtypes"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="message-text" class="col-form-label">Cannot exist without:</label>
+                            <textarea class="form-control" id="cannot-exist-without"></textarea>
+                        </div>
 					</form>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-primary" id = "save" onClick = "saveAdd()">Save changes</button>
 				</div>
 		</div>
 		</div>
@@ -80,17 +96,17 @@
     <div class = "tables">
         <!-- entity table -->
         <div class = "entity-table">
-            <div class = "table-title">
-                Entity Table
-            </div>
+			<div class="table-header">
+				<h1>Entities</h1>
+				<button id="entityButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
+					<img src="assets/plus.svg">
+				</button>
+			</div>
             <table class="table" id = "entTable">
                 <thead>
 					<tr>
-						<th scope="col">e1:(pk, attributes, ...)</th>
+						<th scope="col">e1:(pk, attri butes, ...)</th>
 						<th scope = "col">
-							<button id="entityButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
-								<img src="assets/plus.svg">
-							</button>
 						</th>
 					</tr>
                 </thead>
@@ -98,7 +114,7 @@
                   <tr>
                     <td>Entity 1</td>
                     <td>
-                        <button type="button" class="btn btn-outline-secondary">
+                        <button type="button" class="btn btn-outline-secondary" onClick="info()" id = "0">
                             <img src="assets/info-circle.svg">
                         </button>
                     </td>
@@ -109,10 +125,20 @@
 
         <!-- relationship table -->
         <div class = "relationship-table">
-            test 2
+			<div class="table-header">
+				<h1>Relationships</h1>
+				<button id="relationshipButton" type="button" class="btn btn-secondary entityButton" data-bs-toggle="modal" data-bs-target="#entityModal">
+					<img src="assets/plus.svg">
+				</button>
+			</div>
         </div>
     </div>
+
+	<div class="footer">
+		<button type="button" class="btn btn-primary btn-lg" id="confirm">Create Database</button>
+	</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src = "scripts/main.js"></script>
+	<script src = "scripts/cilent.js"></script>
 </body>
 </html>
