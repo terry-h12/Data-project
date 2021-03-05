@@ -31,6 +31,8 @@ function saveAdd() {
   
     createEntity(name, pk, attributes, subtypes, cannot_exist_without);
 
+    passentity();
+
     let entity_id = 0;
     let my_html_content = 
                         `<tr>
