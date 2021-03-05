@@ -16,7 +16,7 @@ function passentity () {
         },
         body: JSON.stringify(data)
     };
-    fetch('/api', options).then(response => {
+    fetch('/createTable', options).then(response => {
         console.log(response)
     });
 }

@@ -10,7 +10,9 @@ app.use(express.static( __dirname + '/frontend'));
 //     res.sendFile(path.join( __dirname, 'frontend', 'index.html' ));
 // });
 
-app.post('/api', (req,res)=>{
+app.post('/createTable', (req,res)=>{
+    const db = require("./modules/adjustDB");
+    console.log(db.addTable(), "hello");
     console.log(req.body);
     res.json({
         status: 'success'
