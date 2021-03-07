@@ -22,4 +22,11 @@ con.connect(function(err) {
     });
 });
 
-module.exports = con;
+var con2 = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "etan1233",
+    database: "mydb"
+});
+
+module.exports = con2;

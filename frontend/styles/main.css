@@ -1,5 +1,5 @@
 .tables {
-    margin-top: 80px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
@@ -13,14 +13,44 @@
 }
 
 .entity-table {
+    border-radius: 8px;
     border-style: solid;
     border-width: 2px;
     width: 35%;
     margin-right: 10px;
 }
 
+.middle {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.middleHeader {
+    text-orientation:sideways-right;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+
+#mHeader {
+    margin-left: 5px;
+    margin-right: -100px;
+}
+
+.diagram {
+    align-self: center;
+    height: 400px;
+    width: 72%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+}
+
 .relationship-table{
-    text-align: center;
+    border-radius: 8px;
     border-style: solid;
     border-width: 2px;
     width: 35%;
@@ -54,6 +84,7 @@
     height: 24px;
     width: 24px;
     right: 10px;
+    border-style: solid;
 }
 
 #relationshipButton {
@@ -66,10 +97,34 @@
     height: 24px;
     width: 24px;
     right: 10px;
+    border-style: solid;
 }
 
 .footer {
-    padding-top: 50px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
 }
+
+.relationship_dropdown {
+    margin-left: 0.15%;
+}
+
+.rel-first-entity-attribute {
+    margin-top:1.5%;
+}
+
+.rel-second-entity-attribute {
+    margin-top:1.5%;
+    margin-left:16.8%;
+}
+
+.rel-attribute-data-type-right {
+    margin-top:1.5%;
+    margin-left:34%;
+}
+
+.rel-attribute-data-type-left {
+    margin-top:1.5%;
+}
+
